@@ -19,13 +19,24 @@ class ArticleController extends AbstractController
         $this->em = $em;
     }
     /**
-     * @Route("/article", name="article")
+     * @Route("/articles", name="articles")
      */
     public function index(): Response
     {
         $articles = $this->articleRepository->findAll();
         return $this->render('article/index.html.twig', [
             'articles' => $articles,
+        ]);
+    }
+    /**
+     * @Route("/article/{id}", name="article_by_id")
+     */
+
+    public function article($id): Response
+    {
+        $article = $this->articleRepository->find($id);
+        return $this->render('article/article.html.twig', [
+            'article' => $article,
         ]);
     }
 }
