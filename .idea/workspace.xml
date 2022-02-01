@@ -10,8 +10,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/8593509d-1eb3-4c99-a330-9551b2b7bb39.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/8593509d-1eb3-4c99-a330-9551b2b7bb39/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ArticleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ArticleController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/article/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/article/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +142,7 @@
       <updated>1643640972870</updated>
       <workItem from="1643640976620" duration="652000" />
       <workItem from="1643642264613" duration="11201000" />
-      <workItem from="1643729031451" duration="6856000" />
+      <workItem from="1643729031451" duration="8747000" />
     </task>
     <servers />
   </component>

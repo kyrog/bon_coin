@@ -231,9 +231,6 @@
             "ref": "fadbfe33303a76e25cb63401050439aa9b1a9c7f"
         }
     },
-    "symfony/orm-pack": {
-        "version": "v2.2.0"
-    },
     "symfony/polyfill-intl-grapheme": {
         "version": "v1.20.0"
     },
@@ -249,8 +246,8 @@
     "symfony/polyfill-php80": {
         "version": "v1.20.0"
     },
-    "symfony/profiler-pack": {
-        "version": "v1.0.6"
+    "symfony/polyfill-php81": {
+        "version": "v1.24.0"
     },
     "symfony/proxy-manager-bridge": {
         "version": "v5.4.3"
@@ -297,9 +294,6 @@
             "config/packages/twig.yaml",
             "templates/base.html.twig"
         ]
-    },
-    "symfony/twig-pack": {
-        "version": "v1.0.1"
     },
     "symfony/var-dumper": {
         "version": "v5.1.8"
