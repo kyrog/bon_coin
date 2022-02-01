@@ -1,6 +1,4 @@
-ARG PHP_VERSION=7.4
-
-FROM php:${PHP_VERSION}-fpm-alpine
+FROM php:7.4-fpm-alpine
 
 RUN apk add --update \
     zip \
