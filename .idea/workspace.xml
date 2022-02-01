@@ -5,7 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="44c1fa7d-f6f3-44be-833f-fa2dd373b8cf" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3dabcc46-99e4-4945-b5ee-e5ddd5c21771.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3dabcc46-99e4-4945-b5ee-e5ddd5c21771/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8593509d-1eb3-4c99-a330-9551b2b7bb39.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8593509d-1eb3-4c99-a330-9551b2b7bb39/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e4bf97de-0502-4fea-8a5d-2acc45c59f21.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e4bf97de-0502-4fea-8a5d-2acc45c59f21.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/docker-symfony-5.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/docker-symfony-5.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Article.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,6 +109,8 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/persistence" />
       <path value="$PROJECT_DIR$/vendor/symfony/web-profiler-bundle" />
       <path value="$PROJECT_DIR$/vendor/symfony/profiler-pack" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/data-fixtures" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-fixtures-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="24T3ue8G5gHdrbmxo1cE36QKgAS" />
@@ -134,7 +148,8 @@
       <option name="presentableId" value="Default" />
       <updated>1643640972870</updated>
       <workItem from="1643640976620" duration="652000" />
-      <workItem from="1643642264613" duration="10180000" />
+      <workItem from="1643642264613" duration="11201000" />
+      <workItem from="1643729031451" duration="2803000" />
     </task>
     <servers />
   </component>
@@ -151,5 +166,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

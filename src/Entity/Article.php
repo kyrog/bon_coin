@@ -2,13 +2,14 @@
 
 namespace App\Entity;
 
+use App\Entity\Base\EntityBase;
 use App\Repository\ArticleRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity(repositoryClass=ArticleRepository::class)
  */
-class Article
+class Article extends EntityBase
 {
     /**
      * @ORM\Id
@@ -31,16 +32,6 @@ class Article
      * @ORM\Column(type="float")
      */
     private $price;
-
-    /**
-     * @ORM\Column(type="datetime_immutable")
-     */
-    private $created_at;
-
-    /**
-     * @ORM\Column(type="datetime_immutable")
-     */
-    private $updated_at;
 
     public function getId(): ?int
     {
@@ -79,30 +70,6 @@ class Article
     public function setPrice(float $price): self
     {
         $this->price = $price;
-
-        return $this;
-    }
-
-    public function getCreatedAt(): ?\DateTimeImmutable
-    {
-        return $this->created_at;
-    }
-
-    public function setCreatedAt(\DateTimeImmutable $created_at): self
-    {
-        $this->created_at = $created_at;
-
-        return $this;
-    }
-
-    public function getUpdatedAt(): ?\DateTimeImmutable
-    {
-        return $this->updated_at;
-    }
-
-    public function setUpdatedAt(\DateTimeImmutable $updated_at): self
-    {
-        $this->updated_at = $updated_at;
 
         return $this;
     }
