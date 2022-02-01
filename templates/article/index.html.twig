@@ -1,5 +1,21 @@
 {% extends 'layout.html.twig' %}
 
 {% block container %}
-    <h1>article</h1>
+    <div class="py-5">
+        <div class="container">
+            <div class="row hidden-md-up">
+            {% for article in articles %}
+                <div class="col-md-4">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ article.title }}</h5>
+                            <p class="card-text">{{ article.description }}</p>
+                            <a href="#" class="btn btn-primary">{{ article.price }}</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+            </div>
+        </div>
+    </div>
 {% endblock %}
