@@ -31,7 +31,7 @@ class AppFixtures extends Fixture
         $encoded = $this->encoder->encodePassword($admin, $plainPassword);
         $admin->setPassword($encoded)
             ->setEmail('admin@admin.fr')
-            ->setRoles(["ROLE_ADMIN"]);
+            ->setRoles(["ROLE_ADMIN", "ROLE_USER"]);
         $manager->persist($admin);
 
 
