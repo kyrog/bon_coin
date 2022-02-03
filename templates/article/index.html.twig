@@ -10,6 +10,7 @@
                 <th>Title</th>
                 <th>Description</th>
                 <th>Price</th>
+                <th>author</th>
                 <th>CreatedAt</th>
                 <th>UpdatedAt</th>
                 {% if is_granted('ROLE_ADMIN') %}
@@ -24,6 +25,7 @@
                 <td>{{ article.title }}</td>
                 <td>{{ article.description }}</td>
                 <td>{{ article.price }}</td>
+                <td>{{ article.user_id }}</td>
                 <td>{{ article.createdAt ? article.createdAt|date('Y-m-d H:i:s') : '' }}</td>
                 <td>{{ article.updatedAt ? article.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
                 {% if is_granted('ROLE_ADMIN') %}
