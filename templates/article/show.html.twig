@@ -4,39 +4,33 @@
 
 {% block container %}
     <h1>Article</h1>
+<div class="d-flex mt-5">
+    <div class= "col-md-5">
+        <img class="card-img-top" src="https://random.imagecdn.app/500/150" alt="Card image cap">
+    </div>
+    <div class="col-md-7">
+        <div>
+            <label>Title : {{ article.title }}</label>
+        </div>
+        <div>
+             <label>Description : {{ article.description }}</label>
+        </div>
+        <div>
+            <label>Price : {{ article.price }}</label>
+        </div>
+        <div>
+            <th>CreatedAt : {{ article.createdAt ? article.createdAt|date('Y-m-d') : '' }}</th>
+        </div>
+        <div>
+            <label>UpdatedAt : {{ article.updatedAt ? article.updatedAt|date('Y-m-d H:i:s') : '' }}</label>
+        </div>
+        <div>
+            <a href="{{ path('article_index') }} " class="btn btn-primary">back to list</a> 
+            <a href="{{ path('article_edit', {'id': article.id}) }}"  class="btn btn-primary">edit</a>
+        </div>
+    </div>
+</div>
 
-    <table class="table">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ article.id }}</td>
-            </tr>
-            <tr>
-                <th>Title</th>
-                <td>{{ article.title }}</td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>{{ article.description }}</td>
-            </tr>
-            <tr>
-                <th>Price</th>
-                <td>{{ article.price }}</td>
-            </tr>
-            <tr>
-                <th>CreatedAt</th>
-                <td>{{ article.createdAt ? article.createdAt|date('Y-m-d H:i:s') : '' }}</td>
-            </tr>
-            <tr>
-                <th>UpdatedAt</th>
-                <td>{{ article.updatedAt ? article.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <a href="{{ path('article_index') }}">back to list</a>
-
-    <a href="{{ path('article_edit', {'id': article.id}) }}">edit</a>
 
     {{ include('article/_delete_form.html.twig') }}
 {% endblock %}
