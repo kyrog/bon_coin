@@ -27,8 +27,10 @@ class ArticleController extends AbstractController
      */
     public function index(ArticleRepository $articleRepository): Response
     {
+        $currentUser = $this->security->getUser();
         return $this->render('article/index.html.twig', [
             'articles' => $articleRepository->findAll(),
+            'currentUser' => $currentUser,
         ]);
     }
 
@@ -38,12 +40,13 @@ class ArticleController extends AbstractController
     public function new(Request $request, EntityManagerInterface $entityManager): Response
     {
         $article = new Article();
+        $currentUser = $this->security->getUser();
         $form = $this->createForm(ArticleType::class, $article);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
             $article->updatedTimestamps();
-            $article->setUser($this->security->getUser());
+            $article->setUser($currentUser);
 
             $entityManager->persist($article);
             $entityManager->flush();
@@ -72,20 +75,26 @@ class ArticleController extends AbstractController
      */
     public function edit(Request $request, Article $article, EntityManagerInterface $entityManager): Response
     {
-        $form = $this->createForm(ArticleType::class, $article);
-        $form->handleRequest($request);
+        if($article->getUser() === $this->security->getUser() || $this->security->isGranted("ROLE_ADMIN")) {
+            $form = $this->createForm(ArticleType::class, $article);
+            $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $article->updatedTimestamps();
-            $entityManager->flush();
+            if ($form->isSubmitted() && $form->isValid()) {
+                $article->updatedTimestamps();
+                $entityManager->flush();
 
+                return $this->redirectToRoute('article_index', [], Response::HTTP_SEE_OTHER);
+            }
+
+            return $this->renderForm('article/edit.html.twig', [
+                'article' => $article,
+                'form' => $form,
+            ]);
+        }
+        else {
             return $this->redirectToRoute('article_index', [], Response::HTTP_SEE_OTHER);
         }
 
-        return $this->renderForm('article/edit.html.twig', [
-            'article' => $article,
-            'form' => $form,
-        ]);
     }
 
     /**
