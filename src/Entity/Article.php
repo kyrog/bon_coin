@@ -46,9 +46,15 @@ class Article extends EntityBase
      */
     private $tag;
 
+    /**
+     * @ORM\ManyToMany(targetEntity=Gallery::class, inversedBy="articles")
+     */
+    private $gallery;
+
     public function __construct()
     {
         $this->tag = new ArrayCollection();
+        $this->gallery = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -124,6 +130,30 @@ class Article extends EntityBase
     public function removeTag(Tag $tag): self
     {
         $this->tag->removeElement($tag);
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Gallery[]
+     */
+    public function getGallery(): Collection
+    {
+        return $this->gallery;
+    }
+
+    public function addGallery(Gallery $gallery): self
+    {
+        if (!$this->gallery->contains($gallery)) {
+            $this->gallery[] = $gallery;
+        }
+
+        return $this;
+    }
+
+    public function removeGallery(Gallery $gallery): self
+    {
+        $this->gallery->removeElement($gallery);
 
         return $this;
     }
