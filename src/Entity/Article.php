@@ -4,6 +4,8 @@ namespace App\Entity;
 
 use App\Entity\Base\EntityBase;
 use App\Repository\ArticleRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -38,6 +40,16 @@ class Article extends EntityBase
      * @ORM\JoinColumn(nullable=false)
      */
     private $user;
+
+    /**
+     * @ORM\ManyToMany(targetEntity=Tag::class, inversedBy="articles")
+     */
+    private $tag;
+
+    public function __construct()
+    {
+        $this->tag = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -88,6 +100,30 @@ class Article extends EntityBase
     public function setUser(?User $user): self
     {
         $this->user = $user;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Tag[]
+     */
+    public function getTag(): Collection
+    {
+        return $this->tag;
+    }
+
+    public function addTag(Tag $tag): self
+    {
+        if (!$this->tag->contains($tag)) {
+            $this->tag[] = $tag;
+        }
+
+        return $this;
+    }
+
+    public function removeTag(Tag $tag): self
+    {
+        $this->tag->removeElement($tag);
 
         return $this;
     }
