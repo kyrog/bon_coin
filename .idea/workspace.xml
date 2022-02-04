@@ -8,6 +8,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/e4bf97de-0502-4fea-8a5d-2acc45c59f21.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e4bf97de-0502-4fea-8a5d-2acc45c59f21.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Article.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,6 +151,8 @@
       <workItem from="1643642264613" duration="11201000" />
       <workItem from="1643729031451" duration="13093000" />
       <workItem from="1643813264617" duration="1039000" />
+      <workItem from="1643979013901" duration="191000" />
+      <workItem from="1643979322868" duration="634000" />
     </task>
     <servers />
   </component>
