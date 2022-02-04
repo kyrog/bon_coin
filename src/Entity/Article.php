@@ -56,6 +56,11 @@ class Article extends EntityBase
      */
     private $comments;
 
+    /**
+     * @ORM\OneToOne(targetEntity=Vote::class, mappedBy="article", cascade={"persist", "remove"})
+     */
+    private $vote;
+
     public function __construct()
     {
         $this->tag = new ArrayCollection();
@@ -190,6 +195,28 @@ class Article extends EntityBase
                 $comment->setArticle(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getVote(): ?Vote
+    {
+        return $this->vote;
+    }
+
+    public function setVote(?Vote $vote): self
+    {
+        // unset the owning side of the relation if necessary
+        if ($vote === null && $this->vote !== null) {
+            $this->vote->setArticle(null);
+        }
+
+        // set the owning side of the relation if necessary
+        if ($vote !== null && $vote->getArticle() !== $this) {
+            $vote->setArticle($this);
+        }
+
+        $this->vote = $vote;
 
         return $this;
     }
