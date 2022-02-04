@@ -13,9 +13,10 @@
                 <a class="nav-link" href="{{ path("article_new") }}">créer un article</a>
             </li>
         </ul>
+        {{ render(controller(
+            'App\\Controller\\SearchController::searchBar'
+        )) }}
         <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             {% if is_granted('IS_AUTHENTICATED_FULLY') %}
                 <a class="btn btn-outline-danger my-2 my-sm-0" href="{{ path("app_logout") }}">logout</a>
             {% endif %}
